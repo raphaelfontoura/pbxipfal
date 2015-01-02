@@ -1,0 +1,165 @@
+#header {
+	
+        height:90px;
+	overflow:hidden;
+	z-index:5;
+}
+
+#footer{
+	color: white;
+	font-size:12px;
+        height: 50px;
+        position:relative;
+        text-align: center;
+        top: 100px;
+        
+}
+body {
+	color:#515151;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+        background: #009a78;
+}
+
+h1 {
+	/*color:#005600;*/
+        color: #003a74;
+	font-size:22px;
+	font-weight:bold;
+}
+
+/*- Formulários -*/
+.input-text,.tel_mask,.cpf_mask,.datepicker {
+	background:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding:3px;
+        text-transform: uppercase;
+}
+
+.input-pass {
+	background:#fff;
+	padding:3px;
+}
+.input-login {
+	background:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding:3px;
+        text-transform: lowercase;
+}
+
+select {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding:3px 2px;
+}
+
+select:focus,
+.cpf_mask:focus,
+.datepicker:focus,
+.tel_mask:focus,
+.input-text:focus,
+.input-pass:focus,
+.input-login:focus{
+    background: #ebfffa;
+    border:1px solid #009a78;
+    outline:none;
+    
+}
+
+a:link,a:visited{
+    /*color: #006600;   #009a78*/
+    color: #006666;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+a:hover{
+    /*color: #006600;*/
+    color: #006666;
+    font-weight: bold;
+    border: 1px solid #009a78;
+    text-shadow: 1px 1px 0px #f8f8f8;
+    text-decoration: none;
+    border-radius: 5px;
+    /*background: #dbeedb;*/
+    background: #defff6;
+    font-size: 13px;
+}
+
+.conteudo {
+        background: white;
+        background-image: url('../imagens/PbxIPFal.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        margin-bottom: -100px;
+        border-radius: 5px;
+        padding-left: 85px;
+        padding-right: 50px;
+        padding-top: 20px;
+        min-height: 520px;
+}
+
+.clear { clear:both; }
+
+.btn{
+    width: 90px;
+    /*background:#005600;*/
+    background: #009a78;
+    color: white;
+    border-radius: 5px;   
+}
+
+.btn_reload{
+    width: 90px;
+    background: #cc0000;
+    color: white;
+    border-radius: 5px;
+}
+
+form{
+    font-weight: bold
+}
+
+.sucess{
+    font-weight: bold;
+    font-size: 13px;
+    background: #cce5fd;
+    color: #003399;
+    border-radius: 5px;
+    border: solid 1px #003399;
+    height: 20px;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.error{
+        font-weight: bold;
+        font-size: 13px;
+        background: #fdd3d6;
+        color: #ff0000;
+        border-radius: 5px;
+        border: solid 1px #ff0000;
+        /*height: 20px;*/
+        vertical-align: middle;
+        padding-top: 5px;
+        padding-left: 5px;
+}
+
+ul{
+    text-align: left;
+    list-style-type: square;
+    line-height: 30px;
+    font-size: 15px;
+    
+}
+
+
+
+
+

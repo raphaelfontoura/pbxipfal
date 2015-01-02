@@ -1,0 +1,208 @@
+    1  vim /etc/sudoers
+    2  clear
+    3  vim .bashrc 
+    4  exit
+    5  clear
+    6  vim /etc/hostname 
+    7  vim /etc/hosts
+    8  vim /etc/hostname 
+    9  reboot
+   10  ]ifconfig
+   11  ping 8.8.8.8
+   12  ]ifconfig
+   13  yum upgrade
+   14  yum install openssh-
+   15  yum install openssh
+   16  ifconfig -a
+   17  vi /etc/ssh/sshd_config 
+   18  clear
+   19  yum install -y make wget openssl-devel ncurses-devel  newt-devel libxml2-devel kernel-devel gcc gcc-c++ sqlite-devel libuuid-devel
+   20  cd /usr/src/
+   21  wget http://downloads.asterisk.org/pub/telephony/dahdi-linux-complete/dahdi-linux-complete-current.tar.gz
+   22  wget http://downloads.asterisk.org/pub/telephony/libpri/libpri-1.4-current.tar.gz
+   23  wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-11-current.tar.gz
+   24  tar zxvf dahdi-linux-complete*
+   25  tar zxvf libpri*
+   26  tar zxvf asterisk*
+   27  cd /usr/src/dahdi-linux-complete-2.10.0.1+2.10.0.1/
+   28  make && make install && make config
+   29  cd ..
+   30  ll
+   31  cd libpri-1.4.15/
+   32  make && make install
+   33  cd ../asterisk-11.15.0/
+   34  ll
+   35  cd contrib/
+   36  ll
+   37  cd scripts/
+   38  ll
+   39  ./install_prereq 
+   40  ./install_prereq install
+   41  ./install_prereq install-unpackaged
+   42  yum install subversion
+   43  ./install_prereq install-unpackaged
+   44  cd ..
+   45  ./configure --libdir=/usr/lib64 && make menuselect && make && make install
+   46  make clean && make distclean
+   47  make samples
+   48  ./configure --libdir=/usr/lib64
+   49  make samples
+   50  make config
+   51  service dahdi start
+   52  vim /etc/init.d/dahdi 
+   53  service dahdi stop
+   54  service dahdi start
+   55  service asterisk start
+   56  rasterisk -vvvvgci
+   57  reboot 
+   58  cd /var/lib/asterisk/
+   59  ll
+   60  cd agi-bin/
+   61  ll
+   62  cd ..
+   63  rm -rf agi-bin/
+   64  ll
+   65  cd agi-bin/
+   66  ll
+   67  chmod +x *.php
+   68  ll
+   69  cd ..
+   70  cd moh/
+   71  ll
+   72  cd ..
+   73  rm -rf moh/
+   74  ls moh/
+   75  ls mohgsm/
+   76  ll
+   77  cd sounds/
+   78  ll
+   79  rm -rf en/
+   80  ll
+   81  cd ..
+   82  cd sounds/
+   83  ll
+   84  cd hours/
+   85  ll
+   86  rasterisk -vvvgci
+   87  iptables -L -n
+   88  service iptables stop
+   89  systemctl mask firewalld
+   90  reboot 
+   91  mysql -u root -p
+   92  cd /etc/asterisk/
+   93  ll
+   94  cd /home/delphini/
+   95  ll
+   96  cd ViaPABX_Conege/
+   97  ll
+   98  cd etc_asterisk/
+   99  ll
+  100  cp -a adsi.conf /etc/asterisk/
+  101  cp -a app_mysql.conf /etc/asterisk/
+  102  cp -a cdr.conf /etc/asterisk/
+  103  cp -a cdr_custom.conf /etc/asterisk/
+  104  cp -a cdr_manager.conf /etc/asterisk/
+  105  cp -a cdr_mysql.conf /etc/asterisk/
+  106  cp -a extensions.conf /etc/asterisk/
+  107  cp -a features.conf /etc/asterisk/
+  108  cp -a iax.conf /etc/asterisk/
+  109  cp -a indications.conf /etc/asterisk/
+  110  cp -a manager.conf /etc/asterisk/
+  111  cp -a meetme.conf /etc/asterisk/
+  112  cp -a musiconhold.conf /etc/asterisk/
+  113  cp -a pbx/ /etc/asterisk/
+  114  cp -a queues.conf /etc/asterisk/
+  115  cp -a sip.conf /etc/asterisk/
+  116  cp voicemail.conf /etc/asterisk/
+  117  service asterisk stop
+  118  service asterisk start
+  119  clear
+  120  ll
+  121  clear
+  122  ll
+  123  rasterisk -vvvvgci
+  124  clear
+  125  ll
+  126  cd ..
+  127  ll
+  128  cd var_www/
+  129  ll
+  130  cd html/
+  131  ll
+  132  cp -a IAPabx/ /var/www/html/
+  133  cp -a index.html /var/www/html/
+  134  ll
+  135  service httpd stop
+  136  service httpd start
+  137  clear
+  138  ll
+  139  cd ..
+  140  ll
+  141  cd var_lib_asterisk/
+  142  ll
+  143  cd ..
+  144  clear
+  145  cd ..
+  146  rm -rf ViaPABX_Conege/
+  147  ll
+  148  clear
+  149  ll
+  150  cd var_lib_asterisk/
+  151  ll
+  152  cp -a agi-bin/ /var/lib/asterisk/
+  153  cp -a moh/ /var/lib/asterisk/
+  154  cp -a mohgsm/ /var/lib/asterisk/
+  155  cd sounds/
+  156  ll
+  157  cp -a br/ /var/lib/asterisk/sounds/
+  158  cd ..
+  159  clear
+  160  ll
+  161  cd ..
+  162  ll
+  163  cp -a hours/ /var/lib/asterisk/sounds/
+  164  ll
+  165  yum install tshark
+  166  yum install wireshark
+  167  tshark -R sip -i any
+  168  clear
+  169  ll
+  170  cd /var/lib/asterisk/sounds/hours/
+  171  ll
+  172  rm -rf *.ogg
+  173  clear
+  174  ll
+  175  cd /usr/src/
+  176  yum install git
+  177  git clone https://github.com/irontec/sngrep
+  178  yum install libncurses5 libncurses5-dbg libncurses5-dev
+  179  yum search libncurses*
+  180  yum search libncurses
+  181  yum search ncurses
+  182  yum search ncurses.x86_64 ncurses-devel.x86_64 ncurses-libs.x86_64 ncurses-static.x86_64
+  183  yum install ncurses.x86_64 ncurses-devel.x86_64 ncurses-libs.x86_64 ncurses-static.x86_64
+  184  yum install ngrep
+  185  yum install stdbuf
+  186  yum search stdbuf
+  187  yum whatprovides *stdbuf*
+  188  yum install coreutils-8.22-11.el7.x86_64
+  189  yum install install libpcap-dev
+  190  yum install libpcap-dev
+  191  yum whatprovides *libpcap-dev*
+  192  yum install libpcap-devel-1.5.3-3.el7_0.1.x86_64
+  193  clear
+  194  cd sngrep/
+  195  ll
+  196  ./configure && make && make install
+  197  sngrep port 5060 and udp
+  198  clear
+  199  cd /var/www/html/IAPabx/
+  200  ll
+  201  cd cdr/
+  202  ll
+  203  vim delphini.txt 
+  204  ln -s /var/spool/asterisk/monitor monitor
+  205  ll
+  206  ls monitor/
+  207  vim /etc/asterisk/extensions.conf 
+  208  history > delphini.txt

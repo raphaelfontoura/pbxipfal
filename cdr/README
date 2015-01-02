@@ -1,0 +1,33 @@
+1 - INTRODUCTION
+
+This is a very very early version, and is provided with absolute no warranty
+
+
+2-INSTALATION
+
+Copy the files to the root directory of your webserver
+/var/www/html/ in my case
+
+Modify the file mapi.php with the address and port of your asterisk manager interface
+
+(line 61)    $socket = fsockopen("127.0.0.1","5038", $errno, $errstr, $timeout);
+    
+Modify the fiel mapi.php whit your manager interface loguin info
+
+replace manager with the username of the manager interface
+replace 123456 with the secret of the manager interface
+
+(line 64)	fwrite($socket, "username: manager\r\n");
+(line 65)	fwrite($socket, "secret: 123456\r\n");
+
+Browse the page mapi.php
+
+If you want to see the state of the devices of the agents when they are making outbound calls, you must use 
+hint priority in your dialplan to provide state information through manager interface 
+
+3 - CONTACT
+
+feel free to mail me
+
+alejogagliardi@gmail.com
+Alejo Gagliardi
